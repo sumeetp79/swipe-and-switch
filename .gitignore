@@ -1,0 +1,5 @@
+*.pro.user
+*.pyc
+resources/wikipedia_wordfreq_full.csv
+
+CHI16/eyeswipe.pdf

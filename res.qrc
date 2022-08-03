@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/words.txt</file>
+        <file>resources/word-freq-5000.csv</file>
+        <file>resources/wikipedia_wordfreq.csv</file>
+        <file>resources/sentences.txt</file>
+        <file>resources/ClickSound.wav</file>
+        <file>resources/palavras.txt</file>
+        <file>resources/sentencesEN.txt</file>
+        <file>resources/sentencesES.txt</file>
+        <file>resources/sentencesPT.txt</file>
+        <file>resources/words_mck.txt</file>
+        <file>resources/palavras-freq.csv</file>
+    </qresource>
+</RCC>

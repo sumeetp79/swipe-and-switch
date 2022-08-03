@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Key.qml</file>
+        <file>PEyeButton.qml</file>
+        <file>PEyeMenu.qml</file>
+        <file>SmartTextField.qml</file>
+        <file>TextFieldToken.js</file>
+        <file>KBButton.qml</file>
+        <file>setup.qml</file>
+        <file>Arrow.qml</file>
+        <file>GestureTutorial.qml</file>
+        <file>tutorial.js</file>
+        <file>Tutorial.qml</file>
+        <file>DwellTutorial.qml</file>
+    </qresource>
+</RCC>
