@@ -1,7 +1,9 @@
 #include <QDebug>
 #include <QFile>
+#include <QVariant>
 #include <math.h>
 #include <limits>
+
 
 #include "WordPredictor.h"
 #include "QPointFUtil.h"
@@ -156,7 +158,7 @@ QStringList WordPredictor::getCandidates(QString lastLetter, double timestamp, b
         QList<QPointF> points = subsample(layout.idealPathFor(wordOccurence.word), subsampleStep);
         wordScores.append(WordScore(wordOccurence, computeScore(samplePoints, points)));
     }
-    qSort(wordScores.begin(), wordScores.end(), compareScoresByScore);
+    std::sort(wordScores.begin(), wordScores.end(), compareScoresByScore);
     wordScores = wordScores.mid(0, 10);
 
     // Compute totals from top-10 candidates
@@ -176,7 +178,7 @@ QStringList WordPredictor::getCandidates(QString lastLetter, double timestamp, b
         it->initProbs(totalOccurences, totalScores);
     }
     // If is exception we only sort by score
-    if (!isException) qSort(wordScores.begin(), wordScores.end(), compareScoresByProb);
+    if (!isException) std::sort(wordScores.begin(), wordScores.end(), compareScoresByProb);
 
     foreach (WordScore wordScore, wordScores)
     {

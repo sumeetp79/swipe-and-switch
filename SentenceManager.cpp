@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <ctime>
 #include <cstdlib>
+#include <random>
 #include <QTextStream>
 
 #include "SentenceManager.h"
@@ -23,8 +24,10 @@ SentenceManager::SentenceManager(QDir participantDir, bool isEnglish, QObject *p
         }
         sentencesFile.close();
 
-        std::srand(unsigned(std::time(0)));
-        std::random_shuffle(sentences.begin(), sentences.end());
+        //std::srand(unsigned(std::time(0)));
+        
+        unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+        std::shuffle(sentences.begin(), sentences.end(), std::default_random_engine(seed));
     }
 
     if (usedSentencesFile.exists() && usedSentencesFile.open(QIODevice::ReadOnly))

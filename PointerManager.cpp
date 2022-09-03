@@ -1,6 +1,7 @@
 #include <QDebug>
 #include <QThread>
 #include <QMetaObject>
+#include <QVariant>
 
 #include "PointerManager.h"
 
