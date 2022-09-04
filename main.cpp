@@ -6,6 +6,7 @@
 #include <QList>
 #include <QMetaType>
 #include <QDebug>
+#include <QResource>
 
 #include "KeyboardManager.h"
 #include "SentenceManager.h"
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
     app.setOrganizationName("Boston University");
     app.setOrganizationDomain("cs.bu.edu");
     app.setApplicationName("KeyEye");
-
+    QResource::registerResource("/resources");
     int retval;
     ExperimentManager expManager;
 
