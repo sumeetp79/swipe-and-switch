@@ -1,6 +1,6 @@
 TEMPLATE = app
 
-QT += qml quick widgets core quickcontrols2
+QT += qml quick widgets core quickcontrols2 multimedia multimediawidgets
 
 CONFIG += c++11
 
@@ -54,13 +54,13 @@ win32 {
     !contains(QMAKE_TARGET.arch, x86_64) {
         ## Windows x86 (32bit)
         message("x86 build")
-        SRC = $$PWD/lib/x86/Tobii.EyeX.Client.dll
-        LIBS += -L$$PWD/lib/x86/ -lTobii.EyeX.Client
+        SRC = $$PWD/lib/x86/tobii_stream_engine.dll ## $$PWD/lib/x86/Tobii.EyeX.Client.dll
+        ## LIBS += -L$$PWD/lib/x86/ -lTobii.EyeX.Client
     } else {
         ## Windows x64 (64bit)
         message("x86_64 build")
-        SRC = $$PWD/lib/x64/Tobii.EyeX.Client.dll
-        LIBS += -L$$PWD/lib/x64/ -lTobii.EyeX.Client
+        SRC = $$PWD/lib/x64/tobii_stream_engine.dll ##$$PWD/lib/x64/Tobii.EyeX.Client.dll
+        ## LIBS += -L$$PWD/lib/x64/ -lTobii.EyeX.Client
     }
 
     SRC ~= s,/,\\,g
